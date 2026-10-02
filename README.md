@@ -24,9 +24,10 @@ Every hour, a GitHub Actions job (`.github/workflows/hourly.yml`, at :17) reads 
 All of it is provisional and may be revised by the agencies; the archive keeps readings **as first published**.
 The agencies hold the reviewed record.
 
-**Thermocline:** no Ohio inland lake has a live temperature-by-depth sensor, so there is nothing live to mirror. The
-historical summer profiles (Water Quality Portal) are built separately in the atlas repo,
-`data/lakes/thermocline/`, and shown on the lake pages as history.
+**Thermocline:** the only live temperature-by-depth readings on these lakes are the Army Corps' seasonal buoys at
+Berlin (24 depths) and Kirwan (19), about June to October, mirrored hourly with a thermocline estimate (steepest
+drop of at least 1 degC per metre). Out of the water they send -99999, which is filtered. Every lake's historical
+summer profile (Water Quality Portal, EPA, Corps records) is built in the atlas repo, `data/lakes/thermocline/`.
 
 ## Files
 
