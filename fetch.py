@@ -429,6 +429,10 @@ def upload(mode):
                         "--s3-no-check-bucket", "--header-upload", "Cache-Control: public, max-age=300",
                         "copy", PUB, "r2:crackedbuckeye/lakes-live"], check=True)
     elif mode == "s3":
+        missing = [k for k in ("R2_ENDPOINT", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY") if not os.environ.get(k)]
+        if missing:   # keep archiving in CI until the repo's R2 secrets are set; say so on the run page
+            print(f"::warning::not uploaded: secret(s) {', '.join(missing)} not set on the repo")
+            return
         import boto3
         s3 = boto3.client("s3", endpoint_url=os.environ["R2_ENDPOINT"], region_name="auto",
                           aws_access_key_id=os.environ["R2_ACCESS_KEY_ID"],
