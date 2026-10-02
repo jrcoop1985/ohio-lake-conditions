@@ -392,8 +392,10 @@ def build_public(reg, rows, forecasts):
                 groups.append({"source": "NWS", "id": w["station"], "name": f"{w['name']} weather station ({w['station']}), {w['km']} km away",
                                "url": f"https://aviationweather.gov/data/metar/?ids={w['station']}", "series": items})
                 wx = {i["key"].split(":")[-1]: i for i in items}
+                # a METAR carries a gust only when one was observed: the latest gust can be hours older than the wind
+                gust = wx.get("wgst") if wx.get("wgst", {}).get("time") == wx.get("wspd", {}).get("time") else None
                 head["wind"] = {"station": w["station"], "km": w["km"], "time": items[0]["time"],
-                                "speed_kt": wx.get("wspd", {}).get("value"), "gust_kt": wx.get("wgst", {}).get("value"),
+                                "speed_kt": wx.get("wspd", {}).get("value"), "gust_kt": (gust or {}).get("value"),
                                 "dir_deg": wx.get("wdir", {}).get("value")}
                 if "temp" in wx:
                     head["air_temp"] = {"value": wx["temp"]["value"], "unit": "degC", "time": wx["temp"]["time"]}
