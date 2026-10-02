@@ -1,0 +1,3805 @@
+{
+ "built_utc": "2026-10-02T21:36:43+00:00",
+ "sources": {
+  "usgs": "https://api.waterdata.usgs.gov/ogcapi/v0/collections",
+  "cwms": "https://cwms-data.usace.army.mil/cwms-data",
+  "weather": "https://aviationweather.gov/api/data"
+ },
+ "lakes": [
+  {
+   "slug": "acton",
+   "name": "Acton Lake",
+   "lat": 39.55667,
+   "lon": -84.735,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Preble",
+    "Butler"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03272429",
+      "name": "Four Mile Creek near College Corner OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.591996125005,
+      "lon": -84.7705106176728
+     },
+     {
+      "site": "393456084455400",
+      "name": "L FOURMILE C AB ACTON LK NR OXFORD OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.5822740793441,
+      "lon": -84.7649547817486
+     }
+    ],
+    "series": []
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KOXD",
+     "name": "Oxford/Miami Univ Arpt",
+     "km": 7.1
+    },
+    {
+     "station": "KRID",
+     "name": "Richmond Muni",
+     "km": 24.0
+    }
+   ]
+  },
+  {
+   "slug": "alumcreek",
+   "name": "Alum Creek Lake",
+   "lat": 40.18724,
+   "lon": -82.96335,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Delaware"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03228750",
+      "name": "Alum Creek near Kilbourne OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.3567280564734,
+      "lon": -82.9215704346876
+     },
+     {
+      "site": "03229000",
+      "name": "Alum Creek at Columbus OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.9450641482862,
+      "lon": -82.9410138041623
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "251ec17bd28c4db2b5defa0648986b2f",
+      "site": "03229000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "4c623a5107c24d21aa83e1272e5d3c93",
+      "site": "03228750",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "b3b9e3c30d9d47e4ae0997f8ec9e37ea",
+      "site": "03228750",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "c60a2755dcaa4945a90613a5620f37d4",
+      "site": "03229000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "AlumCr-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "AlumCr-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "AlumCr-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "AlumCr-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "AlumCr-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "AlumCr-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "AlumCr-Outflow.Temp-Water.Inst.1Hour.0.OBS",
+      "unit": "F"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KOSU",
+     "name": "Columbus/Ohio State Univ Arpt",
+     "km": 15.5
+    },
+    {
+     "station": "KDLZ",
+     "name": "Delaware Muni",
+     "km": 16.5
+    }
+   ]
+  },
+  {
+   "slug": "atwood",
+   "name": "Atwood Lake",
+   "lat": 40.52663,
+   "lon": -81.28613,
+   "operator": "Muskingum Watershed Conservancy District",
+   "counties": [
+    "Carroll",
+    "Tuscarawas"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03121000",
+      "name": "Atwood Lake near New Cumberland OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.52613307943869,
+      "lon": -81.28564057582558
+     },
+     {
+      "site": "03121500",
+      "name": "Indian Fork bl Atwood Dam near New Cumberland OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.5253418759867,
+      "lon": -81.2881642411248
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "5d086b6d42fa4784b22b69d5bc5888b5",
+      "site": "03121500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "73fc2613a7a04dfca99f2ea1a786e79a",
+      "site": "03121500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "ea4281fec62848d8b4e2f41d6a9b91c0",
+      "site": "03121000",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Atwood-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Atwood-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Atwood-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Atwood-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Atwood-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Atwood-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Atwood-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Atwood-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Atwood-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Atwood-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KPHD",
+     "name": "New Philadelphia/Clever Fld",
+     "km": 13.1
+    },
+    {
+     "station": "KCAK",
+     "name": "Akron/Canton Rgnl",
+     "km": 45.5
+    }
+   ]
+  },
+  {
+   "slug": "berlin",
+   "name": "Berlin Lake",
+   "lat": 41.04605,
+   "lon": -81.00246,
+   "operator": "U.S. Army Corps of Engineers, Pittsburgh District",
+   "counties": [
+    "Mahoning",
+    "Portage",
+    "Stark"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03090000",
+      "name": "Berlin Lake near Berlin Center OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 41.0461690289632,
+      "lon": -81.0025921762076
+     },
+     {
+      "site": "03090500",
+      "name": "Mahoning River bl Berlin Dam nr Berlin Center OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 41.0483912342479,
+      "lon": -81.0012032275245
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "0f6af51106a84a009f5f10153b745009",
+      "site": "03090500",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "21f192e045344e1ba3bff1b8350ce213",
+      "site": "03090500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": "submersible transducer"
+     },
+     {
+      "time_series_id": "3f122ab188ec47bab31fa645b5003679",
+      "site": "03090500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "c3264a44e4674a36bafdebe675ec2dc5",
+      "site": "03090000",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": "From radar"
+     },
+     {
+      "time_series_id": "e22cb8d25deb4293a8740471a6025ed6",
+      "site": "03090000",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "ed44dd5f0da047f1bb4e46a472bcc926",
+      "site": "03090500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRP",
+    "series": [
+     {
+      "tsid": "Berlin-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Berlin-Lake.Flow-Inflow-Comp.Inst.1Hour.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Berlin-Lake.Precip-Cum.Inst.15Minutes.0.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Berlin-Lake.Precip-Inc.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Berlin-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Berlin-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Berlin-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Berlin-Outflow.Temp-Water.Inst.15Minutes.0.OBS",
+      "unit": "F"
+     }
+    ],
+    "profile": {
+     "office": "LRP",
+     "series": [
+      {
+       "tsid": "Berlin-Lake-D03ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 3
+      },
+      {
+       "tsid": "Berlin-Lake-D06ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 6
+      },
+      {
+       "tsid": "Berlin-Lake-D09ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 9
+      },
+      {
+       "tsid": "Berlin-Lake-D12ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 12
+      },
+      {
+       "tsid": "Berlin-Lake-D15ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 15
+      },
+      {
+       "tsid": "Berlin-Lake-D18ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 18
+      },
+      {
+       "tsid": "Berlin-Lake-D21ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 21
+      },
+      {
+       "tsid": "Berlin-Lake-D24ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 24
+      },
+      {
+       "tsid": "Berlin-Lake-D27ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 27
+      },
+      {
+       "tsid": "Berlin-Lake-D30ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 30
+      },
+      {
+       "tsid": "Berlin-Lake-D33ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 33
+      },
+      {
+       "tsid": "Berlin-Lake-D36ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 36
+      },
+      {
+       "tsid": "Berlin-Lake-D39ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 39
+      },
+      {
+       "tsid": "Berlin-Lake-D42ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 42
+      },
+      {
+       "tsid": "Berlin-Lake-D45ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 45
+      },
+      {
+       "tsid": "Berlin-Lake-D48ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 48
+      },
+      {
+       "tsid": "Berlin-Lake-D51ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 51
+      },
+      {
+       "tsid": "Berlin-Lake-D54ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 54
+      },
+      {
+       "tsid": "Berlin-Lake-D57ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 57
+      },
+      {
+       "tsid": "Berlin-Lake-D60ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 60
+      },
+      {
+       "tsid": "Berlin-Lake-D63ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 63
+      },
+      {
+       "tsid": "Berlin-Lake-D66ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 66
+      },
+      {
+       "tsid": "Berlin-Lake-D69ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 69
+      },
+      {
+       "tsid": "Berlin-Lake-D72ft.Temp.Inst.0.0.WQDataLive-Raw-T-Node",
+       "depth_ft": 72
+      }
+     ]
+    }
+   },
+   "weather": [
+    {
+     "station": "KPOV",
+     "name": "Ravenna/Portage Cnty",
+     "km": 27.4
+    },
+    {
+     "station": "KYNG",
+     "name": "Youngstown-Warren Rgnl",
+     "km": 36.0
+    }
+   ]
+  },
+  {
+   "slug": "buckeyelake",
+   "name": "Buckeye Lake",
+   "lat": 39.92778,
+   "lon": -82.48833,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Fairfield",
+    "Licking",
+    "Perry"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "395540082291600",
+      "name": "Buckeye Lake near Watkins Island OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 39.9277777777778,
+      "lon": -82.4877777777778
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "5f9a320c6ed243468579e70de8df7317",
+      "site": "395540082291600",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "ccf42af5a84d460ab866ee3d16faab08",
+      "site": "395540082291600",
+      "param": "00045",
+      "name": "Precipitation",
+      "unit": "in",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KVTA",
+     "name": "Newark/Heath Arpt",
+     "km": 11.2
+    },
+    {
+     "station": "KLHQ",
+     "name": "Lancaster/Fairfield Cnty",
+     "km": 24.1
+    }
+   ]
+  },
+  {
+   "slug": "burroak",
+   "name": "Burr Oak Lake",
+   "lat": 39.54215,
+   "lon": -82.0579,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Athens",
+    "Morgan",
+    "Perry"
+   ],
+   "usgs": {
+    "gauges": [],
+    "series": []
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "TomJenkins-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Precip.Inst.15Minutes.0.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "TomJenkins-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "TomJenkins-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "TomJenkins-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KUNI",
+     "name": "Albany/Ohio Univ Arpt",
+     "km": 39.2
+    },
+    {
+     "station": "KZZV",
+     "name": "Zanesville Muni",
+     "km": 47.1
+    }
+   ]
+  },
+  {
+   "slug": "caesarcreek",
+   "name": "Caesar Creek Lake",
+   "lat": 39.48495,
+   "lon": -84.0613,
+   "operator": "U.S. Army Corps of Engineers",
+   "counties": [
+    "Warren",
+    "Clinton",
+    "Greene"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03242340",
+      "name": "Caesar Creek Lake at Wellman OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 39.4861716573774,
+      "lon": -84.0604889039274
+     },
+     {
+      "site": "03242350",
+      "name": "Caesar Creek near Wellman OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.4825605293642,
+      "lon": -84.0643778836506
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "326169ea22f64c0a80989ef6b20ee790",
+      "site": "03242350",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "47521acef7044fdf95b786904005bf48",
+      "site": "03242340",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "617d61f6bd7d49d58132f1866be859eb",
+      "site": "03242350",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRL",
+    "series": [
+     {
+      "tsid": "CaesarCreek.Elev.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CaesarCreek.Flow-Inflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CaesarCreek.Flow-Outflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CaesarCreek.Flow-Outflow.Inst.1Hour.0.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CaesarCreek.Stage-Tailwater.Inst.0.0.lrldlb-raw",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CaesarCreek.Stor.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ac-ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KI68",
+     "name": "Lebanon/Warren Cnty",
+     "km": 16.6
+    },
+    {
+     "station": "KMGY",
+     "name": "Dayton/Wright Brothers Arpt",
+     "km": 18.5
+    }
+   ]
+  },
+  {
+   "slug": "charlesmill",
+   "name": "Charles Mill Lake",
+   "lat": 40.7424,
+   "lon": -82.37506,
+   "operator": "U.S. Army Corps of Engineers, Huntington District (Muskingum Watershed Conservancy District manages recreation)",
+   "counties": [
+    "Ashland",
+    "Richland"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03130000",
+      "name": "Black Fork below Charles Mill Dam near Mifflin OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.7378353086225,
+      "lon": -82.3632186911777
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "ecb058c8b21443fcb729d5bb6bad134f",
+      "site": "03130000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "CharlesMill-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "CharlesMill-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "CharlesMill-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CharlesMill-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CharlesMill-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CharlesMill-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KMFD",
+     "name": "Mansfield/Lahm Rgnl",
+     "km": 14.8
+    },
+    {
+     "station": "K10G",
+     "name": "Millersburg/Holmes Cnty",
+     "km": 42.4
+    }
+   ]
+  },
+  {
+   "slug": "cjbrown",
+   "name": "C.J. Brown Reservoir",
+   "lat": 39.95,
+   "lon": -83.74667,
+   "operator": "U.S. Army Corps of Engineers, Louisville District",
+   "counties": [
+    "Clark"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03268100",
+      "name": "Buck Creek bl CJ Brown Reservoir nr Springfield OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 39.9514490186837,
+      "lon": -83.7540935531906
+     },
+     {
+      "site": "03269000",
+      "name": "Buck Creek at Springfield OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.9325599035594,
+      "lon": -83.8171509241442
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "d1dbd6e57eb84943985f8d04714243a9",
+      "site": "03268100",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "d8e63c93cbf646db9655bfb15c675ddf",
+      "site": "03268100",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRL",
+    "series": [
+     {
+      "tsid": "CJBrown.Elev.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CJBrown.Flow-Inflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CJBrown.Flow-Outflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CJBrown.Flow-Outflow.Inst.1Hour.0.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "CJBrown.Stage-Tailwater.Inst.0.0.lrldlb-raw",
+      "unit": "ft"
+     },
+     {
+      "tsid": "CJBrown.Stor.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ac-ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KSGH",
+     "name": "Springfield Muni",
+     "km": 15.2
+    },
+    {
+     "station": "KI74",
+     "name": "Urbana/Grimes Fld",
+     "km": 20.2
+    }
+   ]
+  },
+  {
+   "slug": "clendening",
+   "name": "Clendening Lake",
+   "lat": 40.26908,
+   "lon": -81.27657,
+   "operator": "Muskingum Watershed Conservancy District / U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Harrison"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03126500",
+      "name": "Clendening Lake at Tippecanoe OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.2695116728562,
+      "lon": -81.2784417369432
+     },
+     {
+      "site": "03126910",
+      "name": "Brushy Fork near Tippecanoe OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.2661111111111,
+      "lon": -81.2841666666667
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "6e9bbbc780a74ddca7b5f123377a8ab6",
+      "site": "03126910",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "e1e7ea9d0ce34cc3938d370d43e4895a",
+      "site": "03126500",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "e689c9ed87e24cd8b272adecc162abe9",
+      "site": "03126910",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Clendening-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Clendening-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Clendening-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Clendening-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Clendening-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Clendening-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Clendening-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Clendening-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KPHD",
+     "name": "New Philadelphia/Clever Fld",
+     "km": 25.5
+    },
+    {
+     "station": "KCDI",
+     "name": "Cambridg Muni",
+     "km": 41.4
+    }
+   ]
+  },
+  {
+   "slug": "cowan",
+   "name": "Cowan Lake",
+   "lat": 39.38806,
+   "lon": -83.92444,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Clinton"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03243400",
+      "name": "Cowan Creek at Clinton County Air Force Base OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.4086728022771,
+      "lon": -83.7993699395333
+     },
+     {
+      "site": "03243500",
+      "name": "Cowan Creek near Wilmington OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.4056172196625,
+      "lon": -83.8165927139546
+     },
+     {
+      "site": "392252083515800",
+      "name": "COWAN C AB COWAN LK NR WILMINGTON OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.3811727535977,
+      "lon": -83.8660387524599
+     }
+    ],
+    "series": []
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KILN",
+     "name": "Wilmington Arpt",
+     "km": 13.5
+    },
+    {
+     "station": "KI68",
+     "name": "Lebanon/Warren Cnty",
+     "km": 29.6
+    }
+   ]
+  },
+  {
+   "slug": "deercreek",
+   "name": "Deer Creek Lake",
+   "lat": 39.62209,
+   "lon": -83.21523,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Pickaway",
+    "Fayette",
+    "Madison"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03230745",
+      "name": "Deer Creek at US Route 142 near London OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.9047830069346,
+      "lon": -83.3929740796886
+     },
+     {
+      "site": "03230800",
+      "name": "Deer Creek at Mount Sterling OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.715061125629,
+      "lon": -83.257136857534
+     },
+     {
+      "site": "03230900",
+      "name": "Deer Creek near Pancoastburg OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.620617402069,
+      "lon": -83.2129682209532
+     },
+     {
+      "site": "03231000",
+      "name": "Deer Creek at Williamsport OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.5858953722871,
+      "lon": -83.1226870060609
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "09887be3b13e4e15a3179a7d70a64b72",
+      "site": "03230800",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "2fdd7ed1bb3c4a1f87812222eed534be",
+      "site": "03231000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "48cfc66f5bfe48a7b8eedca5e83123ad",
+      "site": "03230900",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "b732d33aeda24a6da92b484c2259e08f",
+      "site": "03230800",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "DeerCr-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "DeerCr-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "DeerCr-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "DeerCr-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "DeerCr-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "DeerCr-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "DeerCr-Outflow.Temp-Water.Inst.1Hour.0.OBS",
+      "unit": "F"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KI23",
+     "name": "Washington Court House/Fayette Cnty",
+     "km": 18.8
+    },
+    {
+     "station": "KCYO",
+     "name": "Circleville/Pickaway Cnty",
+     "km": 23.2
+    }
+   ]
+  },
+  {
+   "slug": "delawarelake",
+   "name": "Delaware Lake",
+   "lat": 40.35888,
+   "lon": -83.069,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Delaware",
+    "Marion",
+    "Morrow"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03223000",
+      "name": "Olentangy River at Claridon OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.5828373782129,
+      "lon": -82.9887968514467
+     },
+     {
+      "site": "03225500",
+      "name": "Olentangy River near Delaware OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.3550609592137,
+      "lon": -83.0671318145995
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "1f527b55baeb4a8abca9ef7929478bbe",
+      "site": "03225500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "4650e5cd9ee74c1fb3a370f4dc4ae9f2",
+      "site": "03225500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "91999679fd834ab1a476a989127ba6d5",
+      "site": "03223000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Delaware-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Delaware-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Delaware-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Delaware-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Delaware-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Delaware-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Delaware-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Delaware-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Delaware-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Delaware-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Delaware-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KDLZ",
+     "name": "Delaware Muni",
+     "km": 9.5
+    },
+    {
+     "station": "KMRT",
+     "name": "Marysville/Union Cnty",
+     "km": 28.0
+    }
+   ]
+  },
+  {
+   "slug": "dillon",
+   "name": "Dillon Lake",
+   "lat": 39.99222,
+   "lon": -82.07994,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Muskingum"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03146500",
+      "name": "Licking River near Newark OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.0592324494756,
+      "lon": -82.3395947610859
+     },
+     {
+      "site": "03147000",
+      "name": "Licking River at Toboso OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.057289346301,
+      "lon": -82.2198670172049
+     },
+     {
+      "site": "03147500",
+      "name": "Licking River bl Dillon Dam near Dillon Falls OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 39.988400487034,
+      "lon": -82.0804166107767
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "7e053b83892a45e18e009a97ebdf9a2e",
+      "site": "03147500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "996d870b685d4187b4d2e4e09355a19d",
+      "site": "03146500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "c0cb9a28bacd4e7180cdc96bbbf3a635",
+      "site": "03146500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Dillon-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Dillon-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Dillon-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Dillon-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Dillon-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Dillon-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Dillon-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Dillon-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Dillon-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Dillon-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Dillon-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KZZV",
+     "name": "Zanesville Muni",
+     "km": 16.7
+    },
+    {
+     "station": "KVTA",
+     "name": "Newark/Heath Arpt",
+     "km": 32.9
+    }
+   ]
+  },
+  {
+   "slug": "eastfork",
+   "name": "East Fork Lake",
+   "lat": 39.02278,
+   "lon": -84.15056,
+   "operator": "U.S. Army Corps of Engineers (Louisville District), lake and dam; Ohio Department of Natural Resources, state park lease",
+   "counties": [
+    "Clermont"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03247041",
+      "name": "E Fk Little Miami River bl Harsha Dam nr Bantam OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 39.0239529403304,
+      "lon": -84.1499346469164
+     },
+     {
+      "site": "03247500",
+      "name": "East Fork Little Miami River at Perintown OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.1370054838924,
+      "lon": -84.237991820701
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "3f42177104be49339594fc9644a9c321",
+      "site": "03247500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "94602d37417749c3acd68e7e49955e29",
+      "site": "03247041",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "b732e45f24c14ccdad4c6f416b4f2cfa",
+      "site": "03247500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "ec55c29c1f274e00afd03903da983a5d",
+      "site": "03247041",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRL",
+    "series": [
+     {
+      "tsid": "WHHarsha.Elev.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WHHarsha.Flow-Inflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WHHarsha.Flow-Outflow.Ave.1Hour.1Hour.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WHHarsha.Flow-Outflow.Inst.1Hour.0.lrldlb-comp",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WHHarsha.Stage-Tailwater.Inst.0.0.lrldlb-raw",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WHHarsha.Stor.Inst.1Hour.0.lrldlb-comp",
+      "unit": "ac-ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KI69",
+     "name": "Batavia/Clermont Cnty",
+     "km": 8.0
+    },
+    {
+     "station": "KLUK",
+     "name": "Cincinnati/Lunken Fld",
+     "km": 24.7
+    }
+   ]
+  },
+  {
+   "slug": "grandlake",
+   "name": "Grand Lake St. Marys",
+   "lat": 40.535,
+   "lon": -84.57333,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Mercer",
+    "Auglaize"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03322485",
+      "name": "Beaver Creek near Celina OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.5347222222222,
+      "lon": -84.5763888888889
+     },
+     {
+      "site": "402913084285400",
+      "name": "Chickasaw Creek at St. Marys OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.4869444444444,
+      "lon": -84.4816666666667
+     },
+     {
+      "site": "402958084363300",
+      "name": "Coldwater Creek at Coldwater OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.4994909657388,
+      "lon": -84.6091238213871
+     },
+     {
+      "site": "403204084342601",
+      "name": "Grand Lake St Marys near Celina OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.5344444444444,
+      "lon": -84.5738888888889
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "0fd6055b49154fdb93b97eab9520e6d8",
+      "site": "402913084285400",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "16aa4d52d4c54573b59800da9b1689ba",
+      "site": "03322485",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "1c3f8cc6b48e4382886f4f89abb159f4",
+      "site": "403204084342601",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "33ff6511c63f4ef0baf2cd512c795ea1",
+      "site": "03322485",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "667f124306bf4e1ea31504589c6f808b",
+      "site": "402913084285400",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "ea423247325d43c3af78971534fec853",
+      "site": "403204084342601",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KAXV",
+     "name": "Wapakoneta/Armstrong Arpt",
+     "km": 24.1
+    },
+    {
+     "station": "KPLD",
+     "name": "Portland Muni",
+     "km": 36.0
+    }
+   ]
+  },
+  {
+   "slug": "hoover",
+   "name": "Hoover Reservoir",
+   "lat": 40.10806,
+   "lon": -82.88139,
+   "operator": "City of Columbus",
+   "counties": [
+    "Delaware",
+    "Franklin"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03228300",
+      "name": "Big Walnut Creek at Sunbury OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.2361735010758,
+      "lon": -82.8512891558835
+     },
+     {
+      "site": "03228400",
+      "name": "Hoover Reservoir at Central College OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.1083966806185,
+      "lon": -82.8829563940322
+     },
+     {
+      "site": "03228500",
+      "name": "Big Walnut Creek at Central College OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.1036744972363,
+      "lon": -82.8840675263088
+     },
+     {
+      "site": "400540082540400",
+      "name": "FR-523 AT NGWA",
+      "type": "Well",
+      "role": "well",
+      "lat": 40.0943888888889,
+      "lon": -82.9010333333333
+     },
+     {
+      "site": "401410082510500",
+      "name": "Rain gage at Sunbury OH",
+      "type": "Atmosphere",
+      "role": "atmosphere",
+      "lat": 40.2361111111111,
+      "lon": -82.8513888888889
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "10628a52d79c4346ad21c60340f9aacc",
+      "site": "03228500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "2084e62e94a44e4bb516a373d174dc62",
+      "site": "03228300",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "2978ce0a51044c1bb89d9ef75d195e30",
+      "site": "03228300",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "2cea5c4f8d7a414aa74d8a39f7bcd533",
+      "site": "03228300",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "4275c3ec77364427bdb06f5709ff0c9e",
+      "site": "03228300",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "5c0a58b6bd7b4537ba35d97ad191b573",
+      "site": "03228400",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "748b5ed3f9cb495e85fe9bb470eff6f8",
+      "site": "03228300",
+      "param": "00400",
+      "name": "pH",
+      "unit": "pH Units",
+      "note": ""
+     },
+     {
+      "time_series_id": "97594eb5d37347aba35f51c48f14285c",
+      "site": "03228500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "be79ed3a49c84ab98222d21a4739dcbf",
+      "site": "400540082540400",
+      "param": "72019",
+      "name": "Water level, depth LSD",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "cc2d61e4f9604265994629070b4bcaf3",
+      "site": "03228300",
+      "param": "00300",
+      "name": "Dissolved oxygen",
+      "unit": "mg/l",
+      "note": ""
+     },
+     {
+      "time_series_id": "da3501384dc844d5a95be37d648ec06a",
+      "site": "03228400",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": "Water temperature 2 ft below surface"
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KCMH",
+     "name": "Columbus/Glenn Intl",
+     "km": 13.1
+    },
+    {
+     "station": "KOSU",
+     "name": "Columbus/Ohio State Univ Arpt",
+     "km": 17.1
+    }
+   ]
+  },
+  {
+   "slug": "indianlake",
+   "name": "Indian Lake",
+   "lat": 40.4675,
+   "lon": -83.87556,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Logan"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03260500",
+      "name": "Indian Lake at Russells Point OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.4669444444444,
+      "lon": -83.8766666666667
+     },
+     {
+      "site": "03260502",
+      "name": "Great Miami River bl Indian Lake at Russells Pt OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.4672222222222,
+      "lon": -83.8755555555556
+     },
+     {
+      "site": "03260600",
+      "name": "Great Miami River at Russells Point OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.450605754094,
+      "lon": -83.9068830867375
+     },
+     {
+      "site": "402801083523600",
+      "name": "Rain gage at Russells Point OH",
+      "type": "Atmosphere",
+      "role": "atmosphere",
+      "lat": 40.466944444444444,
+      "lon": -83.87666666666667
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "4da75141f8a342709ec59b647970cfae",
+      "site": "03260500",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "92a67378de794c1e8af0fc439275ba39",
+      "site": "03260500",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "c2decd6e9cf243c0a52dbe4a24e0bcd8",
+      "site": "03260500",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KEDJ",
+     "name": "Bellefontaine Rgnl",
+     "km": 11.9
+    },
+    {
+     "station": "KI95",
+     "name": "Kenton/Hardin Cnty",
+     "km": 25.9
+    }
+   ]
+  },
+  {
+   "slug": "lakeloramie",
+   "name": "Lake Loramie",
+   "lat": 40.3575,
+   "lon": -84.35889,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Shelby",
+    "Auglaize"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03261800",
+      "name": "Lake Loramie near Fort Loramie OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.3575,
+      "lon": -84.3580555555556
+     },
+     {
+      "site": "03261890",
+      "name": "Loramie Creek near Fort Loramie OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.3591666666667,
+      "lon": -84.3738888888889
+     },
+     {
+      "site": "03261900",
+      "name": "Loramie Creek at Fort Loramie OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.3492145310651,
+      "lon": -84.3785608572196
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "e96e6ee9c103476985ddb0ff0dae93e3",
+      "site": "03261800",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KAXV",
+     "name": "Wapakoneta/Armstrong Arpt",
+     "km": 16.4
+    },
+    {
+     "station": "KVES",
+     "name": "Versailles/Darke Cnty",
+     "km": 22.5
+    }
+   ]
+  },
+  {
+   "slug": "leesville",
+   "name": "Leesville Lake",
+   "lat": 40.46914,
+   "lon": -81.19467,
+   "operator": "U.S. Army Corps of Engineers, Huntington District (Muskingum Watershed Conservancy District manages recreation)",
+   "counties": [
+    "Carroll"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03120000",
+      "name": "Leesville Lake near Leesville OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.47085574878568,
+      "lon": -81.1942488479023
+     },
+     {
+      "site": "03120500",
+      "name": "McGuire Creek near Leesville OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.4703425785348,
+      "lon": -81.1964930043648
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "32b7d64b5501404aaae4b36368c8806c",
+      "site": "03120500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "526da4ae1e30454488106c3ceba2e803",
+      "site": "03120500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "9d18a43169454803b64acb016df3c465",
+      "site": "03120500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "d428929073384617a40ee7555d6f6edf",
+      "site": "03120000",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Leesville-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Leesville-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Leesville-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Leesville-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Leesville-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Leesville-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Leesville-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Leesville-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Leesville-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Leesville-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Leesville-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KPHD",
+     "name": "New Philadelphia/Clever Fld",
+     "km": 19.2
+    },
+    {
+     "station": "K2G2",
+     "name": "Steubenville/Jefferson Cnty",
+     "km": 43.6
+    }
+   ]
+  },
+  {
+   "slug": "milton",
+   "name": "Lake Milton",
+   "lat": 41.12722,
+   "lon": -80.97778,
+   "operator": "Ohio Department of Natural Resources, Division of Parks & Watercraft",
+   "counties": [
+    "Mahoning"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03091000",
+      "name": "Milton Reservoir near Pricetown OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 41.1272794813997,
+      "lon": -80.9775910443844
+     },
+     {
+      "site": "03094000",
+      "name": "Mahoning River at Leavittsburg OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 41.2392233461388,
+      "lon": -80.8806419703043
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "70d19c18667c463098846a0be8eabc63",
+      "site": "03094000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "94d5e18bc6ae4c21bdddabcd9d042fef",
+      "site": "03091000",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": "from H-312"
+     },
+     {
+      "time_series_id": "b6bf02d327c04ea2af14bd5952722bec",
+      "site": "03094000",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "d1f5bbb4fc8a419198a8a368811f85fd",
+      "site": "03094000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KPOV",
+     "name": "Ravenna/Portage Cnty",
+     "km": 24.4
+    },
+    {
+     "station": "KYNG",
+     "name": "Youngstown-Warren Rgnl",
+     "km": 29.1
+    }
+   ]
+  },
+  {
+   "slug": "mosquito",
+   "name": "Mosquito Creek Lake",
+   "lat": 41.3,
+   "lon": -80.75833,
+   "operator": "U.S. Army Corps of Engineers",
+   "counties": [
+    "Trumbull"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03095000",
+      "name": "Mosquito Creek Lake near Cortland OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 41.299501206154,
+      "lon": -80.7584140990527
+     },
+     {
+      "site": "03095500",
+      "name": "Mosquito Creek bl Mosquito Ck Dam nr Cortland OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 41.2997789820298,
+      "lon": -80.758414101796
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "12769351287a4dec85d70fc78c370e99",
+      "site": "03095500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "13cfc705b36946ada00a50c4e9e83456",
+      "site": "03095500",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "9697be3acd7340e9a5a9b05f6adee40e",
+      "site": "03095000",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "aaa7a390dad14685b8ae5096cc81fee5",
+      "site": "03095500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRP",
+    "series": [
+     {
+      "tsid": "Mosquito-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Mosquito-Lake.Flow-Inflow-Comp.Inst.1Hour.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Mosquito-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Mosquito-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Mosquito-Outflow.Precip-Cum.Inst.15Minutes.0.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Mosquito-Outflow.Precip-Inc.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Mosquito-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Mosquito-Outflow.Temp-Water.Inst.15Minutes.0.OBS",
+      "unit": "F"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KYNG",
+     "name": "Youngstown-Warren Rgnl",
+     "km": 8.7
+    },
+    {
+     "station": "KUCP",
+     "name": "New Castle Muni",
+     "km": 42.1
+    }
+   ]
+  },
+  {
+   "slug": "oshaughnessy",
+   "name": "O'Shaughnessy Reservoir",
+   "lat": 40.154,
+   "lon": -83.126,
+   "operator": "City of Columbus",
+   "counties": [
+    "Delaware"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03219500",
+      "name": "Scioto River near Prospect OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.4195041983232,
+      "lon": -83.1971372128487
+     },
+     {
+      "site": "03220500",
+      "name": "O'Shaughnessy Reservoir near Dublin OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.1539510799114,
+      "lon": -83.1257444757058
+     },
+     {
+      "site": "03220510",
+      "name": "Scioto R. at O'Shaughnessy Dam near Dublin OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.1531177495144,
+      "lon": -83.126300050075
+     },
+     {
+      "site": "03221000",
+      "name": "Scioto River below O'Shaughnessy Dam nr Dublin OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.1433956427286,
+      "lon": -83.1204664243601
+     },
+     {
+      "site": "03222010",
+      "name": "Scioto River at Dublin Road WTP at Columbus OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.9681196469181,
+      "lon": -83.0349067334911
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "03f0205942ad4495b75dabd84ee9ebb1",
+      "site": "03219500",
+      "param": "00300",
+      "name": "Dissolved oxygen",
+      "unit": "mg/l",
+      "note": ""
+     },
+     {
+      "time_series_id": "05b98c8bbef249199bee8e085fb12704",
+      "site": "03221000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "2f7ef5ec853847839a38bbce99fb36f3",
+      "site": "03220500",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "430b66ec79fb4d0b8af268faebff2ec4",
+      "site": "03221000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "594eab02a4dd46559bf1caa44242bf00",
+      "site": "03220510",
+      "param": "00400",
+      "name": "pH",
+      "unit": "pH Units",
+      "note": ""
+     },
+     {
+      "time_series_id": "5f3e0d2c42a14e6d8dc966bf34e4efab",
+      "site": "03220510",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "734b2898de6349c695c3d7ed51a84af8",
+      "site": "03220510",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "85f751acfe01432888f4888b74990f44",
+      "site": "03219500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "89b6f9a811534a179c3f68c29978a594",
+      "site": "03219500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "ab9e1111aabb4ad79b3d18dcbadafb59",
+      "site": "03219500",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "e20de9f86d934e648a8665b432699050",
+      "site": "03219500",
+      "param": "00400",
+      "name": "pH",
+      "unit": "pH Units",
+      "note": ""
+     },
+     {
+      "time_series_id": "eeb5ae3afbe84ccda1138ce9eb7e5c29",
+      "site": "03219500",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "ffd663f22c664eaaa020de3bce98d60d",
+      "site": "03220510",
+      "param": "00300",
+      "name": "Dissolved oxygen",
+      "unit": "mg/l",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KOSU",
+     "name": "Columbus/Ohio State Univ Arpt",
+     "km": 9.3
+    },
+    {
+     "station": "KDLZ",
+     "name": "Delaware Muni",
+     "km": 14.2
+    }
+   ]
+  },
+  {
+   "slug": "paintcreek",
+   "name": "Paint Creek Lake",
+   "lat": 39.34186,
+   "lon": -83.37579,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Ross",
+    "Highland"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03231550",
+      "name": "Paint Creek at Washington Court House OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.5367288926876,
+      "lon": -83.446028897361
+     },
+     {
+      "site": "03232000",
+      "name": "Paint Creek near Greenfield OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.3792304147076,
+      "lon": -83.3754706211477
+     },
+     {
+      "site": "03232470",
+      "name": "Paint Creek near Bainbridge OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.2522872772167,
+      "lon": -83.3493576677804
+     },
+     {
+      "site": "03234000",
+      "name": "Paint Creek near Bourneville OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.2636763083722,
+      "lon": -83.1668520840776
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "2e71bfe830d64b79bb011c798db1015a",
+      "site": "03234000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "3e905f1862a547daaf133fe4b1773b7f",
+      "site": "03232470",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "4f1d58265e5f475d95c3d5254f8297d1",
+      "site": "03234000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "6c02f0ac47964ee7bf94613c37cd88c3",
+      "site": "03232000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "73b781ce9b7d489aae2cb154731fa883",
+      "site": "03232000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "b94acd9a69304290a9de3c259b96904d",
+      "site": "03232470",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "PaintCr-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PaintCr-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PaintCr-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PaintCr-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PaintCr-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PaintCr-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PaintCr-Outflow.Temp-Water.Inst.1Hour.0.OBS",
+      "unit": "F"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KI23",
+     "name": "Washington Court House/Fayette Cnty",
+     "km": 25.7
+    },
+    {
+     "station": "KRZT",
+     "name": "Chillicothe/Ross Cnty",
+     "km": 32.4
+    }
+   ]
+  },
+  {
+   "slug": "piedmont",
+   "name": "Piedmont Lake",
+   "lat": 40.19007,
+   "lon": -81.21302,
+   "operator": "U.S. Army Corps of Engineers, Huntington District",
+   "counties": [
+    "Belmont",
+    "Harrison",
+    "Guernsey"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03125500",
+      "name": "Piedmont Lake at Piedmont OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.192012359824,
+      "lon": -81.2156622686687
+     },
+     {
+      "site": "03126000",
+      "name": "Stillwater Creek at Piedmont OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.1947901047008,
+      "lon": -81.2153844410389
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "412a0a83200e41038d21d701546f8f13",
+      "site": "03125500",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "6095cc95d2054490a54db63790b3d4a0",
+      "site": "03126000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "f58182202e154ab6bdbe82c3f44bef58",
+      "site": "03126000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Piedmont-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Piedmont-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Piedmont-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Piedmont-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Piedmont-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Piedmont-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Precip.Inst.15Minutes.0.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Piedmont-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KPHD",
+     "name": "New Philadelphia/Clever Fld",
+     "km": 35.8
+    },
+    {
+     "station": "KCDI",
+     "name": "Cambridg Muni",
+     "km": 39.1
+    }
+   ]
+  },
+  {
+   "slug": "pleasanthill",
+   "name": "Pleasant Hill Lake",
+   "lat": 40.62294,
+   "lon": -82.32452,
+   "operator": "U.S. Army Corps of Engineers, Huntington District (Muskingum Watershed Conservancy District manages recreation)",
+   "counties": [
+    "Ashland",
+    "Richland"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03133500",
+      "name": "Clear Fork bl Pleasant Hill Dam nr Perrysville OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.6203379154383,
+      "lon": -82.3243284081728
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "c7ced7a326c848a8999e6f42cf9d0d1b",
+      "site": "03133500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "PleasantHill-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "PleasantHill-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "PleasantHill-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "PleasantHill-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PleasantHill-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "PleasantHill-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KMFD",
+     "name": "Mansfield/Lahm Rgnl",
+     "km": 27.3
+    },
+    {
+     "station": "K10G",
+     "name": "Millersburg/Holmes Cnty",
+     "km": 32.8
+    }
+   ]
+  },
+  {
+   "slug": "portagelakes",
+   "name": "Portage Lakes",
+   "lat": 40.99778,
+   "lon": -81.54389,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Summit"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03115917",
+      "name": "Tuscarawas River above Barberton OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 41.02,
+      "lon": -81.5602777777778
+     },
+     {
+      "site": "03115920",
+      "name": "Tuscarawas River at Barberton OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 41.0278331321474,
+      "lon": -81.5873430887506
+     },
+     {
+      "site": "410121081330300",
+      "name": "Long Lake Feeder O&E Canal OH",
+      "type": "Canal",
+      "role": "canal",
+      "lat": 41.0225555760143,
+      "lon": -81.5506741906655
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "1e0d83f6c4434fc2813b2794a2247526",
+      "site": "410121081330300",
+      "param": "72255",
+      "name": "Mean water velocity",
+      "unit": "ft/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "34cce0440d7d46b79df1936ca1f7bdc2",
+      "site": "03115917",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "5509dd59a0444d849ad7f34b8589a0fc",
+      "site": "03115917",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "5ff61a544bd24bf8a399e421c761f85d",
+      "site": "410121081330300",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "939fdb08d306431db8c0e68183e932fd",
+      "site": "410121081330300",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KAKR",
+     "name": "Akron/Fulton Intl",
+     "km": 8.1
+    },
+    {
+     "station": "KCAK",
+     "name": "Akron/Canton Rgnl",
+     "km": 12.2
+    }
+   ]
+  },
+  {
+   "slug": "pymatuning",
+   "name": "Pymatuning Lake",
+   "lat": 41.556,
+   "lon": -80.497,
+   "operator": "Commonwealth of Pennsylvania (Department of Conservation and Natural Resources)",
+   "counties": [
+    "Ashtabula"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03100500",
+      "name": "Pymatuning Reservoir at Pymatuning Dam, PA",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 41.4983867490382,
+      "lon": -80.4628471425872
+     },
+     {
+      "site": "03101500",
+      "name": "Shenango River at Pymatuning Dam, PA",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 41.498108975098,
+      "lon": -80.4600692856195
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "494fdf699eb74a5aabe5d675070a007c",
+      "site": "03101500",
+      "param": "63160",
+      "name": "Stream level, NAVD88",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "4c0ddd1f848645b3b7838e4cc5310ec0",
+      "site": "03101500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "ddd243a65a9f400abbd58f8441b009a1",
+      "site": "03101500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KGKJ",
+     "name": "Meadville Arpt",
+     "km": 24.9
+    },
+    {
+     "station": "KHZY",
+     "name": "Ashtabula/NE Ohio Rgnl",
+     "km": 29.9
+    }
+   ]
+  },
+  {
+   "slug": "rockyfork",
+   "name": "Rocky Fork Lake",
+   "lat": 39.18417,
+   "lon": -83.43944,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Highland"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03232500",
+      "name": "Rocky Fork near Barretts Mills OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 39.218398881898,
+      "lon": -83.3854695347707
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "48f59648174b4776bf49efdf80cb6464",
+      "site": "03232500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "d5e1e0971a954adc8c723647c0e3225a",
+      "site": "03232500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KILN",
+     "name": "Wilmington Arpt",
+     "km": 39.9
+    },
+    {
+     "station": "KI23",
+     "name": "Washington Court House/Fayette Cnty",
+     "km": 42.9
+    }
+   ]
+  },
+  {
+   "slug": "saltfork",
+   "name": "Salt Fork Lake",
+   "lat": 40.10278,
+   "lon": -81.55333,
+   "operator": "Ohio Department of Natural Resources",
+   "counties": [
+    "Guernsey"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03142000",
+      "name": "Wills Creek at Cambridge OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.014516443567,
+      "lon": -81.5870673755032
+     },
+     {
+      "site": "03142290",
+      "name": "Salt Fork Lake near Cambridge OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 40.1042379449515,
+      "lon": -81.554009459512
+     },
+     {
+      "site": "03142500",
+      "name": "Wills Creek at Birds Run OH",
+      "type": "Stream",
+      "role": "stream",
+      "lat": 40.1692380849132,
+      "lon": -81.651512174455
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "ac4c668a8e3b4b19b770df780a95bfd8",
+      "site": "03142000",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "f53b26232cf743ad983e9f8ab520f465",
+      "site": "03142000",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": null,
+   "weather": [
+    {
+     "station": "KCDI",
+     "name": "Cambridg Muni",
+     "km": 14.2
+    },
+    {
+     "station": "KZZV",
+     "name": "Zanesville Muni",
+     "km": 33.8
+    }
+   ]
+  },
+  {
+   "slug": "seneca",
+   "name": "Seneca Lake",
+   "lat": 39.92525,
+   "lon": -81.43522,
+   "operator": "U.S. Army Corps of Engineers (dam); Muskingum Watershed Conservancy District (shoreline and recreation)",
+   "counties": [
+    "Guernsey",
+    "Noble"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03140853",
+      "name": "Seneca Fork above Senecaville Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 39.8638888888889,
+      "lon": -81.3208333333333
+     },
+     {
+      "site": "03140900",
+      "name": "South Fork above Senecaville Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 39.8527777777778,
+      "lon": -81.3286111111111
+     },
+     {
+      "site": "03140950",
+      "name": "Beaver Creek above Senecaville Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 39.9013888888889,
+      "lon": -81.3194444444444
+     },
+     {
+      "site": "03141000",
+      "name": "Senecaville Lake near Senecaville OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 39.9253495542063,
+      "lon": -81.4348409384888
+     },
+     {
+      "site": "03141500",
+      "name": "Seneca Fork bl Senecaville Dam near Senecaville OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 39.9245162429123,
+      "lon": -81.437896618925
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "1c992ad16c0b4c6a83ef0c6d71dae64e",
+      "site": "03140900",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "24af0cef97fd407eb13459ef5eb43af2",
+      "site": "03140900",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "349f3c4e5cf6440e971fd2cbbd9c47b8",
+      "site": "03141500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "54bdb1fbafcd4811b14833f3b11a0ba3",
+      "site": "03140950",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "5ac4d622c3594196b81977753e627447",
+      "site": "03140950",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "6e21185f15f648648d3c27b8a9ac8279",
+      "site": "03140900",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "991206b371bc4e08949a158050b05cf0",
+      "site": "03140950",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "a2de722e76964f44960fc11df4a9b7c0",
+      "site": "03141000",
+      "param": "62614",
+      "name": "Elevation, lake/res, NGVD29",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "c01d462cf8ef4f1ba76c0a38b3a16bc0",
+      "site": "03141500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "da75e7c2a6e44a53b7d9098442ae43ca",
+      "site": "03140853",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "f069ab053d8247178a7826a206d8f4ec",
+      "site": "03140853",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "f49439ac4c404940829eb0579ad16de1",
+      "site": "03140853",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Senecaville-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Senecaville-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Senecaville-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Senecaville-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Senecaville-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Senecaville-Lake.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "Senecaville-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Senecaville-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Senecaville-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Senecaville-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Senecaville-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KCDI",
+     "name": "Cambridg Muni",
+     "km": 13.3
+    },
+    {
+     "station": "KZZV",
+     "name": "Zanesville Muni",
+     "km": 39.1
+    }
+   ]
+  },
+  {
+   "slug": "tappan",
+   "name": "Tappan Lake",
+   "lat": 40.35888,
+   "lon": -81.22664,
+   "operator": "U.S. Army Corps of Engineers (dam); Muskingum Watershed Conservancy District (lake, park)",
+   "counties": [
+    "Harrison"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03127980",
+      "name": "Clear Fork above Tappan Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 40.3386111111111,
+      "lon": -81.1138888888889
+     },
+     {
+      "site": "03127986",
+      "name": "Standingstone Fork above Tappan Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 40.3116666666667,
+      "lon": -81.1152777777778
+     },
+     {
+      "site": "03127989",
+      "name": "Beaverdam Run above Tappan Lake OH",
+      "type": "Stream",
+      "role": "inflow",
+      "lat": 40.3469444444444,
+      "lon": -81.1266666666667
+     },
+     {
+      "site": "03128500",
+      "name": "Little Stillwater Creek bl Tappan Dam at Tappan OH",
+      "type": "Stream",
+      "role": "below_dam",
+      "lat": 40.3570105071722,
+      "lon": -81.2301062393984
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "1f5e251682a1482e856bf4e8321bea62",
+      "site": "03128500",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "2de3d44730ea45649e02a7761e04152d",
+      "site": "03127989",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "32355c77e6884fccac98ef046e9fa335",
+      "site": "03127986",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "43aa7b80a84d49dfbbbd9a8762a4c690",
+      "site": "03128500",
+      "param": "00060",
+      "name": "Discharge",
+      "unit": "ft^3/s",
+      "note": ""
+     },
+     {
+      "time_series_id": "5de503c1679b4de1af384c9b2875896d",
+      "site": "03127989",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "6dd3f33fad604bbdaf41bac526c5018b",
+      "site": "03127986",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "b4b0ac81b25b4841ab6c1e0e80e66933",
+      "site": "03127986",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "e4dc8c80b18540f0be4e8061d065c5d5",
+      "site": "03127989",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     },
+     {
+      "time_series_id": "e8146c60527a4f3aa372b3732e072d42",
+      "site": "03127980",
+      "param": "00010",
+      "name": "Temperature, water",
+      "unit": "degC",
+      "note": ""
+     },
+     {
+      "time_series_id": "f7eecefeebb64e78b3d7b21e6dfadb91",
+      "site": "03127980",
+      "param": "00095",
+      "name": "Specific cond at 25C",
+      "unit": "uS/cm",
+      "note": ""
+     },
+     {
+      "time_series_id": "f9b7d494706c43be89cad5015a4cea75",
+      "site": "03127980",
+      "param": "00065",
+      "name": "Gage height",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "Tappan-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Tappan-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Tappan-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Tappan-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Tappan-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Tappan-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "Tappan-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "Tappan-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Tappan-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "Tappan-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KPHD",
+     "name": "New Philadelphia/Clever Fld",
+     "km": 20.6
+    },
+    {
+     "station": "K2G2",
+     "name": "Steubenville/Jefferson Cnty",
+     "km": 44.6
+    }
+   ]
+  },
+  {
+   "slug": "westbranch",
+   "name": "Michael J. Kirwan Reservoir",
+   "lat": 41.15654,
+   "lon": -81.07931,
+   "operator": "U.S. Army Corps of Engineers, Pittsburgh District",
+   "counties": [
+    "Portage"
+   ],
+   "usgs": {
+    "gauges": [
+     {
+      "site": "03092450",
+      "name": "Michael J Kirwan Reservoir at Wayland OH",
+      "type": "Lake, Reservoir, Impoundment",
+      "role": "lake",
+      "lat": 41.156723485758,
+      "lon": -81.079540212925
+     }
+    ],
+    "series": [
+     {
+      "time_series_id": "5dc27525e6cd4dc9b1e95c89f4beca18",
+      "site": "03092450",
+      "param": "62615",
+      "name": "Elevation, lake/res, NAVD88",
+      "unit": "ft",
+      "note": ""
+     }
+    ]
+   },
+   "cwms": {
+    "office": "LRP",
+    "series": [
+     {
+      "tsid": "MJKirwan-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "MJKirwan-Lake.Flow-Inflow-Comp.Inst.1Hour.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "MJKirwan-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "MJKirwan-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "MJKirwan-Outflow.Precip-Cum.Inst.15Minutes.0.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "MJKirwan-Outflow.Precip-Inc.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "MJKirwan-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "MJKirwan-Outflow.Temp-Water.Inst.15Minutes.0.OBS",
+      "unit": "F"
+     }
+    ],
+    "profile": {
+     "office": "LRP",
+     "series": [
+      {
+       "tsid": "Kirwan-Lake-D03ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 3
+      },
+      {
+       "tsid": "Kirwan-Lake-D06ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 6
+      },
+      {
+       "tsid": "Kirwan-Lake-D09ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 9
+      },
+      {
+       "tsid": "Kirwan-Lake-D12ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 12
+      },
+      {
+       "tsid": "Kirwan-Lake-D15ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 15
+      },
+      {
+       "tsid": "Kirwan-Lake-D18ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 18
+      },
+      {
+       "tsid": "Kirwan-Lake-D21ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 21
+      },
+      {
+       "tsid": "Kirwan-Lake-D24ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 24
+      },
+      {
+       "tsid": "Kirwan-Lake-D27ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 27
+      },
+      {
+       "tsid": "Kirwan-Lake-D30ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 30
+      },
+      {
+       "tsid": "Kirwan-Lake-D33ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 33
+      },
+      {
+       "tsid": "Kirwan-Lake-D36ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 36
+      },
+      {
+       "tsid": "Kirwan-Lake-D39ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 39
+      },
+      {
+       "tsid": "Kirwan-Lake-D43ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 43
+      },
+      {
+       "tsid": "Kirwan-Lake-D45ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 45
+      },
+      {
+       "tsid": "Kirwan-Lake-D48ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 48
+      },
+      {
+       "tsid": "Kirwan-Lake-D51ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 51
+      },
+      {
+       "tsid": "Kirwan-Lake-D54ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 54
+      },
+      {
+       "tsid": "Kirwan-Lake-D57ft.Temp.Inst.0.0.WQDataLive-Raw-TS110",
+       "depth_ft": 57
+      }
+     ]
+    }
+   },
+   "weather": [
+    {
+     "station": "KPOV",
+     "name": "Ravenna/Portage Cnty",
+     "km": 15.3
+    },
+    {
+     "station": "KAKR",
+     "name": "Akron/Fulton Intl",
+     "km": 34.8
+    }
+   ]
+  },
+  {
+   "slug": "willscreek",
+   "name": "Wills Creek Lake",
+   "lat": 40.15639,
+   "lon": -81.84706,
+   "operator": "U.S. Army Corps of Engineers (dam); Muskingum Watershed Conservancy District (lake, land)",
+   "counties": [
+    "Coshocton",
+    "Muskingum",
+    "Guernsey"
+   ],
+   "usgs": {
+    "gauges": [],
+    "series": []
+   },
+   "cwms": {
+    "office": "LRH",
+    "series": [
+     {
+      "tsid": "WillsCr-Lake.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WillsCr-Lake.Elev.Inst.1Day.0.RUL",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WillsCr-Lake.Elev.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WillsCr-Lake.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WillsCr-Lake.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WillsCr-Lake.Stor.Inst.15Minutes.0.OBS",
+      "unit": "ac-ft"
+     },
+     {
+      "tsid": "WillsCr-Outflow.Elev.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     },
+     {
+      "tsid": "WillsCr-Outflow.Flow.Inst.15Minutes.0.OBS",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WillsCr-Outflow.Flow.Inst.1Hour.0.CELRH-FCST-DAILY",
+      "unit": "cfs"
+     },
+     {
+      "tsid": "WillsCr-Outflow.Precip.Total.15Minutes.15Minutes.OBS",
+      "unit": "in"
+     },
+     {
+      "tsid": "WillsCr-Outflow.Stage.Inst.15Minutes.0.OBS",
+      "unit": "ft"
+     }
+    ]
+   },
+   "weather": [
+    {
+     "station": "KI40",
+     "name": "Coshocton/Downing Arpt",
+     "km": 17.1
+    },
+    {
+     "station": "KZZV",
+     "name": "Zanesville Muni",
+     "km": 23.7
+    }
+   ]
+  }
+ ]
+}
