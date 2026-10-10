@@ -57,11 +57,27 @@ CWMS_PARAM = {"Elev": "elevation", "Stor": "Storage", "Flow": "flow", "Flow-Infl
 
 # ---------------------------------------------------------------- fetching
 
+
+def usgs_key():
+    """The api.data.gov key: USGS_API_KEY (the GitHub secret in CI), else API_DATA_GOV_KEY, the owner's key on JoelHome
+    (set 2026-10-10 as a Windows user variable; read from the registry when this shell started before it was set)."""
+    k = os.environ.get("USGS_API_KEY") or os.environ.get("API_DATA_GOV_KEY")
+    if not k and os.name == "nt":
+        try:
+            import winreg
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "Environment") as r:
+                k = winreg.QueryValueEx(r, "API_DATA_GOV_KEY")[0]
+        except OSError:
+            k = None
+    k = (k or '').strip().lstrip('﻿').strip()   # a key piped from Windows PowerShell can carry a BOM (10-10)
+    return k or None
+
 def get_json(url, headers=None, tries=4):
     h = dict(UA)
     h.update(headers or {})
-    if "api.waterdata.usgs.gov" in url and os.environ.get("USGS_API_KEY"):
-        h["X-Api-Key"] = os.environ["USGS_API_KEY"]   # optional free key: a higher hourly limit than anonymous
+    key = usgs_key()
+    if "api.waterdata.usgs.gov" in url and key:
+        h["X-Api-Key"] = key   # free api.data.gov key: a higher hourly limit than anonymous
     ctx = None
     for i in range(tries):
         try:
