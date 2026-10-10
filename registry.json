@@ -1,5 +1,5 @@
 {
- "built_utc": "2026-10-02T21:36:43+00:00",
+ "built_utc": "2026-10-10T18:52:15+00:00",
  "sources": {
   "usgs": "https://api.waterdata.usgs.gov/ogcapi/v0/collections",
   "cwms": "https://cwms-data.usace.army.mil/cwms-data",
@@ -3800,6 +3800,467 @@
      "km": 23.7
     }
    ]
+  },
+  {
+   "slug": "lakeerie",
+   "name": "Lake Erie (Ohio shore)",
+   "kind": "great_lake",
+   "lat": 41.62,
+   "lon": -82.45,
+   "operator": "NOAA",
+   "counties": [
+    "Lucas",
+    "Ottawa",
+    "Sandusky",
+    "Erie",
+    "Lorain",
+    "Cuyahoga",
+    "Lake",
+    "Ashtabula"
+   ],
+   "usgs": {
+    "gauges": [],
+    "series": []
+   },
+   "cwms": null,
+   "weather": [],
+   "erie": {
+    "lwd_ft": 569.23,
+    "coops": [
+     {
+      "id": "9063085",
+      "name": "Toledo",
+      "lat": 41.693554,
+      "lon": -83.472275,
+      "products": [
+       "water_level",
+       "water_temperature",
+       "air_temperature",
+       "wind",
+       "air_pressure",
+       "humidity"
+      ]
+     },
+     {
+      "id": "9063079",
+      "name": "Marblehead",
+      "lat": 41.54364,
+      "lon": -82.73139,
+      "products": [
+       "water_level",
+       "water_temperature",
+       "air_temperature",
+       "wind",
+       "air_pressure",
+       "humidity"
+      ]
+     },
+     {
+      "id": "9063063",
+      "name": "Cleveland",
+      "lat": 41.54086,
+      "lon": -81.635475,
+      "products": [
+       "water_level",
+       "water_temperature",
+       "air_temperature",
+       "wind",
+       "air_pressure"
+      ]
+     },
+     {
+      "id": "9063053",
+      "name": "Fairport",
+      "lat": 41.75975,
+      "lon": -81.28106,
+      "products": [
+       "water_level",
+       "water_temperature",
+       "air_temperature",
+       "air_pressure"
+      ]
+     }
+    ],
+    "ndbc": [
+     {
+      "id": "twco1",
+      "name": "Toledo Crib",
+      "owner": "LimnoTech",
+      "kind": "shore station",
+      "lat": 41.699,
+      "lon": -83.259,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir"
+      ]
+     },
+     {
+      "id": "45165",
+      "name": "Toledo Water Intake buoy",
+      "owner": "LimnoTech",
+      "kind": "buoy",
+      "lat": 41.704,
+      "lon": -83.264,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "45200",
+      "name": "Maumee Bay buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.724,
+      "lon": -83.37,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45005",
+      "name": "West Erie buoy (16 nm NW of Lorain)",
+      "owner": "NDBC",
+      "kind": "buoy",
+      "lat": 41.677,
+      "lon": -82.398,
+      "fields": [
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "pressure"
+      ]
+     },
+     {
+      "id": "sbio1",
+      "name": "South Bass Island",
+      "owner": "NDBC",
+      "kind": "shore station",
+      "lat": 41.629,
+      "lon": -82.841,
+      "fields": [
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45201",
+      "name": "Erie Islands buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.601,
+      "lon": -82.781,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45202",
+      "name": "Port Clinton buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.532,
+      "lon": -82.941,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45203",
+      "name": "Huron buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.393,
+      "lon": -82.512,
+      "fields": [
+       "water_temp",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "hhlo1",
+      "name": "Huron Harbor Light",
+      "owner": "NWS Cleveland",
+      "kind": "shore station",
+      "lat": 41.401,
+      "lon": -82.545,
+      "fields": [
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir"
+      ]
+     },
+     {
+      "id": "vrmo1",
+      "name": "Vermilion River",
+      "owner": "NWS Cleveland",
+      "kind": "shore station",
+      "lat": 41.428,
+      "lon": -82.364,
+      "fields": [
+       "wind_speed",
+       "wind_gust",
+       "wind_dir"
+      ]
+     },
+     {
+      "id": "45204",
+      "name": "Sheffield buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.508,
+      "lon": -82.115,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "45196",
+      "name": "Rocky River buoy",
+      "owner": "LimnoTech",
+      "kind": "buoy",
+      "lat": 41.521,
+      "lon": -81.88,
+      "fields": [
+       "water_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "45205",
+      "name": "Edgewater Beach buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.501,
+      "lon": -81.748,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45176",
+      "name": "Cleveland Intake Crib buoy",
+      "owner": "LimnoTech",
+      "kind": "buoy",
+      "lat": 41.55,
+      "lon": -81.765,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45206",
+      "name": "Euclid Beach buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.585,
+      "lon": -81.583,
+      "fields": [
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45197",
+      "name": "Euclid buoy",
+      "owner": "LimnoTech",
+      "kind": "buoy",
+      "lat": 41.619,
+      "lon": -81.617,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "45164",
+      "name": "Cleveland buoy",
+      "owner": "LimnoTech",
+      "kind": "buoy",
+      "lat": 41.748,
+      "lon": -81.698,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "45207",
+      "name": "Mentor Harbor buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.731,
+      "lon": -81.367,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period"
+      ]
+     },
+     {
+      "id": "45208",
+      "name": "Ashtabula buoy",
+      "owner": "Cleveland Water Alliance",
+      "kind": "buoy",
+      "lat": 41.913,
+      "lon": -80.807,
+      "fields": [
+       "water_temp",
+       "air_temp",
+       "wind_speed",
+       "wind_gust",
+       "wind_dir",
+       "wave_height",
+       "wave_period",
+       "pressure"
+      ]
+     },
+     {
+      "id": "asbo1",
+      "name": "Ashtabula Lighthouse",
+      "owner": "NWS Cleveland",
+      "kind": "shore station",
+      "lat": 41.918,
+      "lon": -80.796,
+      "fields": [
+       "wind_speed",
+       "wind_gust",
+       "wind_dir"
+      ]
+     },
+     {
+      "id": "cblo1",
+      "name": "Conneaut Breakwater Light",
+      "owner": "NWS Cleveland",
+      "kind": "shore station",
+      "lat": 41.981,
+      "lon": -80.556,
+      "fields": [
+       "wind_speed",
+       "wind_gust",
+       "wind_dir"
+      ]
+     }
+    ],
+    "marine": [
+     {
+      "file": "lez142",
+      "zones": [
+       "LEZ142",
+       "LEZ143"
+      ],
+      "names": [
+       "Maumee Bay to Reno Beach OH",
+       "Reno Beach to The Islands OH"
+      ]
+     },
+     {
+      "file": "lez144",
+      "zones": [
+       "LEZ144",
+       "LEZ145",
+       "LEZ146"
+      ],
+      "names": [
+       "The Islands to Vermilion OH",
+       "Vermilion to Avon Point OH",
+       "Avon Point to Willowick OH"
+      ]
+     },
+     {
+      "file": "lez147",
+      "zones": [
+       "LEZ147",
+       "LEZ148",
+       "LEZ149"
+      ],
+      "names": [
+       "Willowick to Geneva-on-the Lake OH",
+       "Geneva-on-the-Lake to Conneaut OH",
+       "Conneaut OH to Ripley NY"
+      ]
+     }
+    ]
+   }
   }
  ]
 }

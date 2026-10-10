@@ -11,6 +11,9 @@ Where the series come from:
   * USACE CWMS: the Corps location named in those scripts, expanded through the CWMS catalog to every public
     observed series, rule curve and forecast for that location that has reported in the last 14 days.
   * Weather (wind, air temperature, gusts, pressure): the nearest METAR station (aviationweather.gov) to the lake.
+  * Lake Erie (slug lakeerie, added 2026-10-10): not one of those 34; its stations are the lists ERIE_COOPS / ERIE_NDBC
+    below, verified live (which products each CO-OPS gauge carries, which columns each NDBC station sends), and the
+    NWS nearshore forecast files. `--erie-only` refreshes just that entry.
 """
 import argparse
 import datetime as dt
@@ -24,6 +27,8 @@ import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+
+import erie
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = {"User-Agent": "CrackedBuckeye/1.0 (crackedbuckeye.com; Ohio lake conditions)"}
@@ -227,16 +232,148 @@ def add_buoys(lakes):
             print(f"{L['slug']}: buoy with {len(L['cwms']['profile']['series'])} depths")
 
 
+# ---------------------------------------------------------------- Lake Erie (Ohio waters)
+
+# NOAA CO-OPS water-level gauges on the Ohio shore (Erie, PA and Fermi, MI are outside Ohio).
+ERIE_COOPS = ["9063085", "9063079", "9063063", "9063053"]
+COOPS_CANDIDATES = ["water_level", "water_temperature", "air_temperature", "wind", "air_pressure", "humidity"]
+# NDBC buoys and shore stations in Ohio waters, with the name this site uses. Left out on purpose: the four NOS gauges
+# (cndo1, faio1, mrho1, thro1 -- the CO-OPS gauges above, read directly), the Old Woman Creek estuary stations (not the
+# lake), Toledo Light No. 2 (thlo1; silent since 15 September), and Camp Perry, Geneva-on-the-Lake and Lorain Harbor
+# (no realtime file).
+ERIE_NDBC = {
+    "twco1": "Toledo Crib", "45165": "Toledo Water Intake buoy", "45200": "Maumee Bay buoy",
+    "45005": "West Erie buoy (16 nm NW of Lorain)", "sbio1": "South Bass Island", "45201": "Erie Islands buoy",
+    "45202": "Port Clinton buoy", "45203": "Huron buoy", "hhlo1": "Huron Harbor Light", "vrmo1": "Vermilion River",
+    "45204": "Sheffield buoy", "45196": "Rocky River buoy", "45205": "Edgewater Beach buoy",
+    "45176": "Cleveland Intake Crib buoy", "45206": "Euclid Beach buoy", "45197": "Euclid buoy",
+    "45164": "Cleveland buoy", "45207": "Mentor Harbor buoy", "45208": "Ashtabula buoy", "asbo1": "Ashtabula Lighthouse",
+    "cblo1": "Conneaut Breakwater Light",
+}
+OWNER_NAME = {"Limno Tech": "LimnoTech", "NWS WFO Cleveland, OH (CLE)": "NWS Cleveland"}
+ERIE_MARINE = ["lez142", "lez144", "lez147"]      # each file covers its neighbours: 142-143, 144-146, 147-149
+ERIE_COUNTIES = ["Lucas", "Ottawa", "Sandusky", "Erie", "Lorain", "Cuyahoga", "Lake", "Ashtabula"]
+
+
+def get_text(url, tries=3):
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=90) as r:
+                return r.read().decode("utf-8", "replace")
+        except Exception:
+            if i == tries - 1:
+                raise
+            time.sleep(10 * (i + 1))
+
+
+def erie_entry(prev=None):
+    """The registry entry for Lake Erie, verified against the live services. `prev` (the previous entry) fills in
+    anything a failed probe could not confirm."""
+    prev = prev or {}
+    old = prev.get("erie", {})
+    now = dt.datetime.now(dt.timezone.utc)
+    coops = []
+    for sid in ERIE_COOPS:
+        before = next((c for c in old.get("coops", []) if c["id"] == sid), {})
+        try:
+            md = get_json(f"{erie.COOPS_MD}/stations/{sid}.json")["stations"][0]
+            name, lat, lon = md["name"], float(md["lat"]), float(md["lng"])
+        except Exception as e:
+            print(f"   CO-OPS {sid}: metadata failed ({e}); keeping the previous entry")
+            if before:
+                coops.append(before)
+            continue
+        have = []
+        for product in COOPS_CANDIDATES:
+            q = {"product": product, "application": "CrackedBuckeye", "station": sid, "time_zone": "gmt",
+                 "units": "metric", "format": "json", "datum": "IGLD",
+                 "begin_date": (now - dt.timedelta(hours=6)).strftime("%Y%m%d %H:%M"), "end_date": now.strftime("%Y%m%d %H:%M")}
+            try:
+                doc = get_json(erie.COOPS_API + "?" + urllib.parse.urlencode(q), tries=2)
+                if doc.get("data"):
+                    have.append(product)
+            except Exception as e:
+                print(f"   CO-OPS {sid} {product}: {e}")
+                if product in before.get("products", []):
+                    have.append(product)
+        coops.append({"id": sid, "name": name, "lat": lat, "lon": lon, "products": have or before.get("products", [])})
+        print(f"   CO-OPS {sid} {name}: {have}")
+    lwd = old.get("lwd_ft")
+    try:
+        d = get_json(f"{erie.COOPS_MD}/stations/9063063/datums.json?units=english")
+        lwd = next(x["value"] for x in d["datums"] if x["name"] == "GL_LWD")
+    except Exception as e:
+        print(f"   LWD datum: {e}")
+
+    meta = {}
+    try:
+        active = get_text(f"{erie.NDBC}/activestations.xml")
+        for m in re.finditer(r"<station ([^>]*?)/?>", active):
+            a = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1)))
+            meta[a["id"].lower()] = a
+    except Exception as e:
+        print(f"   NDBC station list failed ({e})")
+    ndbc = []
+    for sid, short in ERIE_NDBC.items():
+        before = next((c for c in old.get("ndbc", []) if c["id"] == sid), {})
+        a = meta.get(sid)
+        if not a and not before:
+            print(f"   NDBC {sid}: not in the active-stations list; left out")
+            continue
+        try:
+            text = get_text(erie.ndbc_url(sid, 24))
+            rows = erie.parse_ndbc(text, sid, now - dt.timedelta(days=5))
+            fields = sorted({r["series"].split(":")[2] for r in rows}, key=erie.FIELD_ORDER.index)
+        except Exception as e:
+            print(f"   NDBC {sid}: {e}")
+            fields = before.get("fields", [])
+        owner = (a or {}).get("owner") or before.get("owner") or "NOAA NDBC"
+        ndbc.append({"id": sid, "name": short, "owner": OWNER_NAME.get(owner, owner),
+                     "kind": "buoy" if sid.isdigit() else "shore station",
+                     "lat": float(a["lat"]) if a else before["lat"], "lon": float(a["lon"]) if a else before["lon"],
+                     "fields": fields})
+        print(f"   NDBC {sid} {short}: {fields}")
+    marine = []
+    for f in ERIE_MARINE:
+        try:
+            parsed = erie.parse_nsh(get_text(erie.NWS_TEXT + f + ".txt"), f)
+            marine.append({"file": f, "zones": parsed["ids"], "names": parsed["names"]})
+        except Exception as e:
+            print(f"   NWS {f}: {e}")
+            marine.extend(m for m in old.get("marine", []) if m["file"] == f)
+        print(f"   NWS {f}: {marine[-1]['zones'] if marine else None}")
+    return {"slug": erie.SLUG, "name": "Lake Erie (Ohio shore)", "kind": "great_lake", "lat": 41.62, "lon": -82.45,
+            "operator": "NOAA", "counties": ERIE_COUNTIES,
+            "usgs": {"gauges": [], "series": []}, "cwms": None, "weather": [],
+            "erie": {"lwd_ft": lwd, "coops": coops, "ndbc": ndbc, "marine": marine}}
+
+
+def add_erie(lakes, prev=None):
+    """Replace or append the Lake Erie entry (after the inland lakes, which stay sorted by slug)."""
+    lakes[:] = [L for L in lakes if L["slug"] != erie.SLUG]
+    lakes.append(erie_entry(prev))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--atlas", default="C:/Users/jrcoo/work/ohio-tap-water-atlas")
     ap.add_argument("--lakes", default="C:/Users/jrcoo/work/ohio-tap-water-atlas-redesign/data/site/lakes.json")
     ap.add_argument("--buoys-only", action="store_true", help="refresh only the buoy lists in registry.json")
+    ap.add_argument("--erie-only", action="store_true", help="refresh only the Lake Erie entry in registry.json")
     args = ap.parse_args()
     if args.buoys_only:
         path = os.path.join(HERE, "registry.json")
         reg = json.load(open(path, encoding="utf-8"))
         add_buoys(reg["lakes"])
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(reg, f, indent=1)
+        return
+
+    if args.erie_only:
+        path = os.path.join(HERE, "registry.json")
+        reg = json.load(open(path, encoding="utf-8"))
+        add_erie(reg["lakes"], next((L for L in reg["lakes"] if L["slug"] == erie.SLUG), None))
+        reg["built_utc"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
         with open(path, "w", encoding="utf-8") as f:
             json.dump(reg, f, indent=1)
         return
@@ -304,8 +441,11 @@ def main():
               f"weather {weather[0]['station']} {weather[0]['km']} km")
 
     add_buoys(lakes)
+    add_erie(lakes, prev.get(erie.SLUG))
     reg = {"built_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
-           "sources": {"usgs": USGS_API, "cwms": CWMS_API, "weather": AWC_API}, "lakes": lakes}
+           "sources": {"usgs": USGS_API, "cwms": CWMS_API, "weather": AWC_API,
+                       "erie": {"coops": erie.COOPS_API, "ndbc": erie.NDBC + "/data/5day2/", "marine": erie.NWS_TEXT}},
+           "lakes": lakes}
     with open(os.path.join(HERE, "registry.json"), "w", encoding="utf-8") as f:
         json.dump(reg, f, indent=1)
     print("wrote registry.json:", len(lakes), "lakes")

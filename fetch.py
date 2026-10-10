@@ -15,6 +15,7 @@ Sources (all public, no key)
   USGS Water Data API  https://api.waterdata.usgs.gov/ogcapi/v0/collections/continuous  (provisional data)
   USACE CWMS Data API  https://cwms-data.usace.army.mil/cwms-data/timeseries          (provisional data)
   NWS METAR via AWC    https://aviationweather.gov/api/data/metar                     (wind, air, pressure)
+  Lake Erie (erie.py)  NOAA CO-OPS gauges, NDBC buoys, NWS nearshore marine forecast  (2026-10-10; see erie.py)
 """
 import argparse
 import csv
@@ -30,6 +31,8 @@ import time
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+
+import erie
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HIST = os.path.join(HERE, "history")
@@ -98,6 +101,24 @@ def get_json(url, headers=None, tries=4):
             if wait > 120:
                 raise
             time.sleep(max(wait, 15 * (i + 1)))
+        except Exception:
+            if i == tries - 1:
+                raise
+            time.sleep(5 * (i + 1))
+
+
+def get_text(url, headers=None, tries=3):
+    """A plain-text answer (NDBC files, NWS text products). 404 means the file is not there; it is not retried."""
+    h = dict(UA)
+    h.update(headers or {})
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=90) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code in (400, 404) or i == tries - 1:
+                raise
+            time.sleep(10 * (i + 1))
         except Exception:
             if i == tries - 1:
                 raise
@@ -318,7 +339,7 @@ def build_profile(L, by):
                                    if h >= NOW - dt.timedelta(days=7)]}
 
 
-def build_public(reg, rows, forecasts):
+def build_public(reg, rows, forecasts, marine=None, state=None):
     saved_path = os.path.join(os.path.dirname(STATE), "profiles.json")
     try:
         saved = json.load(open(saved_path, encoding="utf-8"))
@@ -326,6 +347,8 @@ def build_public(reg, rows, forecasts):
         saved = {}
     by = {}
     for r in rows:
+        if "suspect" in r["flag"]:      # CO-OPS' own limit / rate-of-change flags: archived, never shown
+            continue
         try:
             by.setdefault((r["lake"], r["series"]), []).append(
                 (dt.datetime.fromisoformat(r["time_utc"]), float(r["value"])))
@@ -333,8 +356,28 @@ def build_public(reg, rows, forecasts):
             continue
     now_doc = {"updated_utc": NOW.isoformat(), "lakes": {}}
     os.makedirs(os.path.join(PUB, "lake"), exist_ok=True)
+    marine_path = os.path.join(os.path.dirname(STATE), "marine.json")
+    build_errors = []
+    try:
+        marine_saved = json.load(open(marine_path, encoding="utf-8"))
+    except (OSError, ValueError):
+        marine_saved = {}
     for L in reg["lakes"]:
         slug = L["slug"]
+        if L.get("erie"):
+            # Lake Erie is not one of the 34 inland lakes: its own file, and now.json["great_lakes"] rather than
+            # now.json["lakes"], so the /lakes/ table on a site that predates it shows exactly what it showed before.
+            try:
+                doc, entry, marine_now = erie.build(L, by, marine or {}, marine_saved, state or {}, NOW, summarize)
+            except Exception as e:   # a Lake Erie bug must never stop the 34 lakes from updating
+                build_errors.append(f"Lake Erie not built: {e!r}")
+                print(f"::warning::{build_errors[-1]}")
+                continue
+            marine_saved = dict(marine_saved, **marine_now)
+            with open(os.path.join(PUB, "lake", f"{slug}.json"), "w", encoding="utf-8") as f:
+                json.dump(doc, f, separators=(",", ":"))
+            now_doc.setdefault("great_lakes", {})[slug] = entry
+            continue
         groups, head = [], {}
         gauges = {g["site"]: g for g in L["usgs"]["gauges"]}
         # USGS, one group per gauge
@@ -436,6 +479,10 @@ def build_public(reg, rows, forecasts):
     os.makedirs(os.path.dirname(saved_path), exist_ok=True)
     with open(saved_path, "w", encoding="utf-8") as f:
         json.dump(saved, f, separators=(",", ":"))
+    if marine_saved:
+        with open(marine_path, "w", encoding="utf-8") as f:
+            json.dump(marine_saved, f, separators=(",", ":"))
+    return build_errors
 
 
 # ---------------------------------------------------------------- upload
@@ -462,6 +509,37 @@ def upload(mode):
     print(f"uploaded {len(files)} files to r2:crackedbuckeye/lakes-live")
 
 
+def fetch_erie(E, lookback, state):
+    """(rows, errors, parsed marine forecasts) for Lake Erie. `lookback(src)` is main()'s per-source gap logic, here per
+    station; a station counts as answered when its request succeeded, whether or not it had anything new."""
+    rows, errors = [], []
+    coops = [(st, lookback("coops:" + st["id"])) for st in E["coops"]]
+    ndbc = [(st, lookback("ndbc:" + st["id"])) for st in E["ndbc"]]
+
+    def one_coops(job):
+        st, h = job
+        return job, erie.fetch_coops(get_json, st, NOW - dt.timedelta(hours=h), NOW)
+
+    def one_ndbc(job):
+        st, h = job
+        return job, erie.fetch_ndbc(get_text, st, h, NOW)
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for (st, _), (r, e) in pool.map(one_coops, coops):
+            rows.extend(r)
+            errors.extend(e)
+            if not e:
+                state["_ok_coops:" + st["id"]] = NOW.isoformat()
+        for (st, _), (r, e) in pool.map(one_ndbc, ndbc):
+            rows.extend(r)
+            errors.extend(e)
+            if not e:
+                state["_ok_ndbc:" + st["id"]] = NOW.isoformat()
+    marine, e = erie.fetch_marine(get_text, [f["file"] for f in E["marine"]])
+    errors.extend(e)
+    return rows, errors, marine
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -481,6 +559,10 @@ def main():
         gap = (NOW - dt.datetime.fromisoformat(last)).total_seconds() / 3600
         return min(max(args.hours, 168), max(args.hours, int(gap) + 3))
     hours = {src: lookback(src) for src in ("usgs", "cwms", "nws")}
+    for L in reg["lakes"]:
+        if L.get("erie"):    # status.json shows the longest look-back among Erie's stations
+            hours["coops"] = max([lookback("coops:" + st["id"]) for st in L["erie"]["coops"]] or [args.hours])
+            hours["ndbc"] = max([lookback("ndbc:" + st["id"]) for st in L["erie"]["ndbc"]] or [args.hours])
     begin = NOW - dt.timedelta(hours=hours["cwms"])
     rows, forecasts, errors = [], {}, []
 
@@ -551,12 +633,23 @@ def main():
                                      "series": f"wx:{w['station']}:{k}", "value": v, "unit": WX_LABEL[k][1],
                                      "flag": ""})
 
+    # Lake Erie: NOAA CO-OPS gauges and NDBC stations, each with its own look-back so a station that was down heals alone
+    marine = {}
+    for L in reg["lakes"]:
+        if L.get("erie"):
+            try:
+                erie_rows, erie_errors, marine = fetch_erie(L["erie"], lookback, state)
+            except Exception as e:   # same rule as in build_public: Lake Erie never takes the inland lakes down with it
+                erie_rows, erie_errors = [], [f"Lake Erie: {e!r}"]
+            rows.extend(erie_rows)
+            errors.extend(erie_errors)
+
     new = archive(rows, state)
     state["_last_run"] = NOW.isoformat()
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     with open(STATE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=0, sort_keys=True)
-    build_public(reg, recent_rows(), forecasts)
+    errors.extend(build_public(reg, recent_rows(), forecasts, marine, state))
     with open(os.path.join(PUB, "status.json"), "w", encoding="utf-8") as f:
         json.dump({"run_utc": NOW.isoformat(), "lookback_hours": hours, "fetched": len(rows), "new": len(new),
                    "errors": errors[:50]}, f, indent=1)
