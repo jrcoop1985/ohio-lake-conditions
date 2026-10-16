@@ -5,6 +5,11 @@
 # skips gh's default-branch lookup, and every attempt (timeouts included) is logged.
 $log = Join-Path $PSScriptRoot 'trigger.log'
 $gh = 'C:\Program Files\GitHub CLI\gh.exe'
+# 2026-10-15: since the task moved to S4U ("run whether logged on or not") gh cannot read its keyring login and every
+# run failed with HTTP 401 from 2026-10-14 01:47. A fine-grained token (Actions: write on this repo only), saved by
+# set_trigger_token.ps1 to a file only the owner's account can read, is handed to gh through GH_TOKEN.
+$tokenFile = Join-Path $env:USERPROFILE '.config\crackedbuckeye\lake-trigger.token'
+if (Test-Path $tokenFile) { $env:GH_TOKEN = (Get-Content $tokenFile -Raw).Trim() }
 $code = 1
 for ($try = 1; $try -le 3; $try++) {
     $out = Join-Path $env:TEMP "lake-trigger-$PID.out"
